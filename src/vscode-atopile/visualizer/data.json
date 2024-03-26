@@ -1,0 +1,51 @@
+{
+    "modules": [
+      "user/documents/spin.ato:SPIN::microcontroller",
+      "user/documents/spin.ato:SPIN::power_stage",
+      "user/documents/spin.ato:SPIN::ldo5V",
+      "user/documents/spin.ato:SPIN::Buck_converter",
+      "user/documents/spin.ato:SPIN::ldo3V3",
+      "user/documents/spin.ato:SPIN::usb_connector",
+      "user/documents/spin.ato:SPIN::power_connector",
+      "user/documents/spin.ato:SPIN::can_connector",
+      "user/documents/spin.ato:SPIN::position_sensor"
+    ],
+    "links": [
+      {
+        "type": "USB2",
+        "from": "user/documents/spin.ato:SPIN::microcontroller.usb2",
+        "to": "user/documents/spin.ato:SPIN::usb_connector.usb2"
+      },
+      {
+        "type": "Power",
+        "from": "user/documents/spin.ato:SPIN::power_connector.power",
+        "to": "user/documents/spin.ato:SPIN::ldo5V.power_out"
+      },
+      {
+        "type": "SPI",
+        "from": "user/documents/spin.ato:SPIN::position_sensor.spi",
+        "to": "user/documents/spin.ato:SPIN::microcontroller.spi1"
+      },
+      {
+        "type": "Phase",
+        "from": "user/documents/spin.ato:SPIN::microcontroller.phase_a",
+        "to": "user/documents/spin.ato:SPIN::power_stage.phase_a"
+      },
+      {
+        "type": "Phase",
+        "from": "user/documents/spin.ato:SPIN::microcontroller.phase_b",
+        "to": "user/documents/spin.ato:SPIN::power_stage.phase_b"
+      },
+      {
+        "type": "Phase",
+        "from": "user/documents/spin.ato:SPIN::microcontroller.phase_c",
+        "to": "user/documents/spin.ato:SPIN::power_stage.phase_c"
+      },
+      {
+        "type": "CAN",
+        "from": "user/documents/spin.ato:SPIN::microcontroller.can",
+        "to": "user/documents/spin.ato:SPIN::can_connector.can",
+        "name": "can"
+      }
+    ]
+  }
