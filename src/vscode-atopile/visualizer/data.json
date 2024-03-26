@@ -13,38 +13,38 @@
     "links": [
       {
         "type": "USB2",
-        "from": "user/documents/spin.ato:SPIN::microcontroller.usb2",
-        "to": "user/documents/spin.ato:SPIN::usb_connector.usb2"
+        "from": "user/documents/spin.ato:SPIN::microcontroller",
+        "to": "user/documents/spin.ato:SPIN::usb_connector"
       },
       {
         "type": "Power",
-        "from": "user/documents/spin.ato:SPIN::power_connector.power",
-        "to": "user/documents/spin.ato:SPIN::ldo5V.power_out"
+        "from": "user/documents/spin.ato:SPIN::power_connector",
+        "to": "user/documents/spin.ato:SPIN::ldo5V"
       },
       {
         "type": "SPI",
-        "from": "user/documents/spin.ato:SPIN::position_sensor.spi",
-        "to": "user/documents/spin.ato:SPIN::microcontroller.spi1"
+        "from": "user/documents/spin.ato:SPIN::position_sensor",
+        "to": "user/documents/spin.ato:SPIN::microcontroller"
       },
       {
         "type": "Phase",
-        "from": "user/documents/spin.ato:SPIN::microcontroller.phase_a",
-        "to": "user/documents/spin.ato:SPIN::power_stage.phase_a"
+        "from": "user/documents/spin.ato:SPIN::microcontroller",
+        "to": "user/documents/spin.ato:SPIN::power_stage"
       },
       {
         "type": "Phase",
-        "from": "user/documents/spin.ato:SPIN::microcontroller.phase_b",
-        "to": "user/documents/spin.ato:SPIN::power_stage.phase_b"
+        "from": "user/documents/spin.ato:SPIN::microcontroller",
+        "to": "user/documents/spin.ato:SPIN::power_stage"
       },
       {
         "type": "Phase",
-        "from": "user/documents/spin.ato:SPIN::microcontroller.phase_c",
-        "to": "user/documents/spin.ato:SPIN::power_stage.phase_c"
+        "from": "user/documents/spin.ato:SPIN::microcontroller",
+        "to": "user/documents/spin.ato:SPIN::power_stage"
       },
       {
         "type": "CAN",
-        "from": "user/documents/spin.ato:SPIN::microcontroller.can",
-        "to": "user/documents/spin.ato:SPIN::can_connector.can",
+        "from": "user/documents/spin.ato:SPIN::microcontroller",
+        "to": "user/documents/spin.ato:SPIN::can_connector",
         "name": "can"
       }
     ]
