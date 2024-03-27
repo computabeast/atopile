@@ -140,6 +140,47 @@ export async function activate(context: vscode.ExtensionContext) {
         }),
     );
 
+    context.subscriptions.push(
+        vscode.commands.registerCommand('atopile.view', async () => {
+            const panel = vscode.window.createWebviewPanel('visualizer', 'Visualizer', vscode.ViewColumn.Two, {
+                // Enable scripts in the webview
+                enableScripts: true,
+                // Restrict the webview to only loading content from our extension's `media` directory.
+                localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, 'visualizer')],
+            });
+
+            const indexPath = vscode.Uri.joinPath(context.extensionUri, 'visualizer', 'index.html');
+            const indexUri = panel.webview.asWebviewUri(indexPath);
+
+            panel.webview.html = getWebviewContent(indexUri);
+
+            function getWebviewContent(indexUri: vscode.Uri) {
+                const nonce = getNonce(); // A function to generate a random nonce
+                return `<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: ${panel.webview.cspSource}; script-src 'nonce-${nonce}' ${panel.webview.cspSource}; style-src ${panel.webview.cspSource}; frame-src ${panel.webview.cspSource};">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Visualizerdfad</title>
+                </head>
+                <body>
+                    <h2>Welcome to the AtoPile Visualizer!</h2>
+                    <iframe src="${indexUri}" width="100%" height="100%"></iframe>
+                </body>
+                </html>`;
+            }
+            function getNonce() {
+                let text = '';
+                const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                for (let i = 0; i < 32; i++) {
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+                return text;
+            }
+        }),
+    );
+
     const commandAtoCreate = 'atopile.create';
     statusbarAtoCreate = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 0);
     statusbarAtoCreate.command = commandAtoCreate;
