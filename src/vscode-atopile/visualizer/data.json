@@ -1,51 +1,242 @@
 {
-    "modules": [
-      "user/documents/spin.ato:SPIN::microcontroller",
-      "user/documents/spin.ato:SPIN::power_stage",
-      "user/documents/spin.ato:SPIN::ldo5V",
-      "user/documents/spin.ato:SPIN::Buck_converter",
-      "user/documents/spin.ato:SPIN::ldo3V3",
-      "user/documents/spin.ato:SPIN::usb_connector",
-      "user/documents/spin.ato:SPIN::power_connector",
-      "user/documents/spin.ato:SPIN::can_connector",
-      "user/documents/spin.ato:SPIN::position_sensor"
+    "blocks": [
+        "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage",
+        "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+        "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+        "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::position_sensor",
+        "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios"
     ],
     "links": [
-      {
-        "type": "USB2",
-        "from": "user/documents/spin.ato:SPIN::microcontroller",
-        "to": "user/documents/spin.ato:SPIN::usb_connector"
-      },
-      {
-        "type": "Power",
-        "from": "user/documents/spin.ato:SPIN::power_connector",
-        "to": "user/documents/spin.ato:SPIN::ldo5V"
-      },
-      {
-        "type": "SPI",
-        "from": "user/documents/spin.ato:SPIN::position_sensor",
-        "to": "user/documents/spin.ato:SPIN::microcontroller"
-      },
-      {
-        "type": "Phase",
-        "from": "user/documents/spin.ato:SPIN::microcontroller",
-        "to": "user/documents/spin.ato:SPIN::power_stage"
-      },
-      {
-        "type": "Phase",
-        "from": "user/documents/spin.ato:SPIN::microcontroller",
-        "to": "user/documents/spin.ato:SPIN::power_stage"
-      },
-      {
-        "type": "Phase",
-        "from": "user/documents/spin.ato:SPIN::microcontroller",
-        "to": "user/documents/spin.ato:SPIN::power_stage"
-      },
-      {
-        "type": "CAN",
-        "from": "user/documents/spin.ato:SPIN::microcontroller",
-        "to": "user/documents/spin.ato:SPIN::can_connector",
-        "name": "can"
-      }
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "power"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+                "port": "power3v3"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::position_sensor",
+                "port": "power"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+                "port": "power3v3"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "power5v"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+                "port": "power5v"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "power3v3"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+                "port": "power3v3"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_a",
+                "port": "control"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "phase_a_control"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_b",
+                "port": "control"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "phase_b_control"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_c",
+                "port": "control"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "phase_c_control"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_a.current_sensor",
+                "port": "output"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "phase_a_current"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_b.current_sensor",
+                "port": "output"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "phase_b_current"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_c.current_sensor",
+                "port": "output"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "phase_c_current"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "out_a"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_a.half_bridge",
+                "port": "output"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "out_b"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_b.half_bridge",
+                "port": "output"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "out_c"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_stage.phase_c.half_bridge",
+                "port": "output"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::position_sensor",
+                "port": "spi"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "spi"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "i2c"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "i2c"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "can"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "can"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "usb2"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "usb2"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "power_usb"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+                "port": "power_usb"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "power_batt"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::power_supply",
+                "port": "power_batt"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "button"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "button"
+            },
+            "type": "interface"
+        },
+        {
+            "source": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::ios",
+                "port": "led"
+            },
+            "target": {
+                "block": "/Users/timot/Dev/atopile/community-projects/spin-servo-drive/elec/src/spin.ato:SPIN::micro",
+                "port": "led"
+            },
+            "type": "interface"
+        }
     ]
-  }
+}

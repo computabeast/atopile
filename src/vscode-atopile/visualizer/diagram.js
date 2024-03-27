@@ -105,21 +105,26 @@ fetch('data.json')
     .catch(error => console.error('Error loading data.json:', error));
 
 function addRectangles(data) {
-    if (data.modules && Array.isArray(data.modules)) {
-        data.modules.forEach((module, index) => {
-            var rect = new AtoElement();
+    if (data.blocks && Array.isArray(data.blocks)) {
+        data.blocks.forEach((module, index) => {
+            var rect = new AtoElement(
+                {
+                    id: module,
+                    instance_name: module,
+                    size: {
+                        width: 10,
+                        height: 10
+                    },
+                    attrs: {
+                        label: {
+                            text: module,
+                        }
+                    },
+                }
+            );
             rect.position(100, 30 + (50 * index)); // Adjust position for each rectangle
             rect.resize(100, 40);
-            rect.id = module;
-            rect.attr({
-                body: {
-                    fill: 'blue'
-                },
-                label: {
-                    text: module.split('::').pop(),
-                    fill: 'white'
-                }
-            });
+            console.log(`Creating rectangle for module ${module}`);
             rect.addTo(graph);
         });
     } else {
@@ -127,33 +132,40 @@ function addRectangles(data) {
     }
 }
 
+function addLink(source_block_id, target_block_id) {
+    console.log(`Creating link from ${source_block_id} to ${target_block_id}`);
+    var added_link = new shapes.standard.Link({
+        source: {id: source_block_id},
+        target: {id: target_block_id}
+    });
+    added_link.attr({
+        line: {
+            'stroke': settings_dict['link']['color'],
+            'stroke-width': 1,
+            targetMarker: { 'type': 'none' },
+        },
+        z: 0
+    });
+    added_link.router('manhattan', {
+        perpendicular: true,
+        step: settings_dict['common']['gridSize'] / 2,
+    });
+
+    return added_link;
+}
+
 function addLinks(data) {
     if (data.links && Array.isArray(data.links)) {
         console.log("All cells in the graph:", graph.getCells());
         data.links.forEach(link => {
-            var sourceModule = graph.getCell(link.from);
-            var targetModule = graph.getCell(link.to);
 
             console.log(`Creating link from ${link.from} to ${link.to}`);
 
             // if (sourceModule && targetModule) {
-            var link = new joint.shapes.standard.Link();
-            link.source({ id: sourceModule.id });
-            link.target({ id: targetModule.id });
-            link.attr({
-                line: {
-                    stroke: 'black',
-                    strokeWidth: 2,
-                    targetMarker: {
-                        'type': 'path',
-                        'd': 'M 10 -5 0 0 10 5 Z'
-                    }
-                }
-            });
+            var link = addLink(link.source.block, link.target.block)
             link.addTo(graph);
             // } else {
             //     console.error('One of the modules in the link is undefined:', link);
-                
             // }
         });
     } else {
