@@ -102,6 +102,48 @@ fetch('data.json')
 
         addLinks(data); // Call the function to add links
     })
+    // Right after you've loaded and logged your data:
+    .then(jsonData => {
+        data = jsonData;
+        console.log("Loaded data:", data);
+
+        // Extract nodes and links for D3 from your JointJS data structure
+        const nodes = data.blocks.map(block => ({
+            id: block.id,
+            ...block
+        }));
+
+        const links = data.links.map(link => ({
+            source: link.source.block,
+            target: link.target.block
+        }));
+
+        // Initialize the D3 force simulation with your nodes and links
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id))
+            .force("charge", d3.forceManyBody())
+            .force("center", d3.forceCenter(1500, 1500)); // Center of your canvas
+
+        // Update the positions of JointJS elements on each simulation tick
+        simulation.on("tick", () => {
+            nodes.forEach(node => {
+                const elem = graph.getCell(node.id);
+                if (elem) {
+                    elem.position(node.x, node.y);
+                }
+            });
+        });
+
+        // Optional: Stop the simulation after a finite time or condition
+        // This is a simple example to stop it after a certain number of ticks
+        simulation.tick(100);
+        simulation.stop();
+
+        // Now, call your functions to add rectangles and links
+        // These functions may need adjustments if they also manipulate positions
+        addRectangles(data);
+        addLinks(data);
+    })
     .catch(error => console.error('Error loading data.json:', error));
 
 function addRectangles(data) {
@@ -173,14 +215,13 @@ function addLinks(data) {
     }
 }
 
-
 var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
 
 var paper = new joint.dia.Paper({
     el: document.getElementById('myholder'),
     model: graph,
-    width: 600,
-    height: 600,
+    width: 3000,
+    height: 3000,
     gridSize: 1,
     cellViewNamespace: namespace
 });

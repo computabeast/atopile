@@ -1,0 +1,242 @@
+{
+  "blocks": [
+      "power_stage",
+      "power_supply",
+      "micro",
+      "position_sensor",
+      "ios"
+  ],
+  "links": [
+      {
+          "source": {
+              "block": "micro",
+              "port": "power"
+          },
+          "target": {
+              "block": "power_supply",
+              "port": "power3v3"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "position_sensor",
+              "port": "power"
+          },
+          "target": {
+              "block": "power_supply",
+              "port": "power3v3"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "power5v"
+          },
+          "target": {
+              "block": "power_supply",
+              "port": "power5v"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "power3v3"
+          },
+          "target": {
+              "block": "power_supply",
+              "port": "power3v3"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "power_stage",
+              "port": "control"
+          },
+          "target": {
+              "block": "micro",
+              "port": "phase_a_control"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "power_stage",
+              "port": "control"
+          },
+          "target": {
+              "block": "micro",
+              "port": "phase_b_control"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "power_stage",
+              "port": "control"
+          },
+          "target": {
+              "block": "micro",
+              "port": "phase_c_control"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "power_stage",
+              "port": "output"
+          },
+          "target": {
+              "block": "micro",
+              "port": "phase_a_current"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "power_stage",
+              "port": "output"
+          },
+          "target": {
+              "block": "micro",
+              "port": "phase_b_current"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "power_stage",
+              "port": "output"
+          },
+          "target": {
+              "block": "micro",
+              "port": "phase_c_current"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "out_a"
+          },
+          "target": {
+              "block": "power_stage",
+              "port": "output"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "out_b"
+          },
+          "target": {
+              "block": "power_stage",
+              "port": "output"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "out_c"
+          },
+          "target": {
+              "block": "power_stage",
+              "port": "output"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "position_sensor",
+              "port": "spi"
+          },
+          "target": {
+              "block": "micro",
+              "port": "spi"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "i2c"
+          },
+          "target": {
+              "block": "micro",
+              "port": "i2c"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "can"
+          },
+          "target": {
+              "block": "micro",
+              "port": "can"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "usb2"
+          },
+          "target": {
+              "block": "micro",
+              "port": "usb2"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "power_usb"
+          },
+          "target": {
+              "block": "power_supply",
+              "port": "power_usb"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "power_batt"
+          },
+          "target": {
+              "block": "power_supply",
+              "port": "power_batt"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "button"
+          },
+          "target": {
+              "block": "micro",
+              "port": "button"
+          },
+          "type": "interface"
+      },
+      {
+          "source": {
+              "block": "ios",
+              "port": "led"
+          },
+          "target": {
+              "block": "micro",
+              "port": "led"
+          },
+          "type": "interface"
+      }
+  ]
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Force-Directed Graph</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .links line {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+
+        .nodes rect {
+            stroke: #fff;
+            stroke-width: 1.5px;
+            cursor: pointer; /* To change cursor type when hovering over node */
+        }
+    </style>
+</head>
+<body>
+    <svg width="2500" height="1200"></svg>
+    <script>
+        // Graph data: 10 nodes and 20 randomly created links
+        const nodes = Array.from({ length: 10 }, (_, i) => ({ id: i }));
+        const links = Array.from({ length: 20 }, () => ({
+            source: Math.floor(Math.random() * nodes.length),
+            target: Math.floor(Math.random() * nodes.length),
+        }));
+
+        const svg = d3.select("svg");
+        const width = +svg.attr("width");
+        const height = +svg.attr("height");
+
+        // Create the zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 4])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        // Apply the zoom behavior to the SVG
+        svg.call(zoom);
+
+        // Create a 'g' (group) element that will contain all other graphical elements
+        const g = svg.append("g");
+
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id))
+            .force("charge", d3.forceManyBody().strength(-5000))
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        // Define the links within the group 'g'
+        const link = g.append("g")
+            .attr("class", "links")
+            .selectAll("line")
+            .data(links)
+            .join("line");
+
+        // Define the nodes within the group 'g'
+        const node = g.append("g")
+            .attr("class", "nodes")
+            .selectAll("rect")
+            .data(nodes)
+            .join("rect")
+            .attr("width", 100)
+            .attr("height", 50)
+            .attr("rx", 5)
+            .attr("ry", 5)
+            .call(drag(simulation));
+
+        node.append("title")
+            .text(d => d.id);
+
+        // Drag functionality
+        function drag(simulation) {
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+
+            return d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+        }
+
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x + 50)
+                .attr("y1", d => d.source.y + 25)
+                .attr("x2", d => d.target.x + 50)
+                .attr("y2", d => d.target.y + 25);
+
+            node
+                .attr("x", d => d.x = Math.max(0, Math.min(width - 100, d.x)))
+                .attr("y", d => d.y = Math.max(0, Math.min(height - 50, d.y)));
+        });
+
+    </script>
+</body>
+</html>
