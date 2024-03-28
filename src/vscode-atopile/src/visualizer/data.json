@@ -134,7 +134,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -145,7 +145,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -167,7 +167,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -178,7 +178,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -189,7 +189,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -280,7 +280,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -291,7 +291,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -313,7 +313,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -324,7 +324,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -335,7 +335,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -406,7 +406,7 @@
                     "block": "resistor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -417,7 +417,7 @@
                     "block": "resistor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -428,7 +428,7 @@
                     "block": "capacitor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -439,7 +439,7 @@
                     "block": "capacitor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -450,7 +450,7 @@
                     "block": "output",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -561,7 +561,7 @@
                     "block": "half_bridge",
                     "port": "power.vcc"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -572,7 +572,7 @@
                     "block": "current_sensor",
                     "port": "input.p"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -583,7 +583,7 @@
                     "block": "current_sensor",
                     "port": "input.n"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -594,7 +594,7 @@
                     "block": "current_sensor",
                     "port": "input.n"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -733,7 +733,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -744,7 +744,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -766,7 +766,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -777,7 +777,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -788,7 +788,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -879,7 +879,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -890,7 +890,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -912,7 +912,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -923,7 +923,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -934,7 +934,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1005,7 +1005,7 @@
                     "block": "resistor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1016,7 +1016,7 @@
                     "block": "resistor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1027,7 +1027,7 @@
                     "block": "capacitor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1038,7 +1038,7 @@
                     "block": "capacitor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1049,7 +1049,7 @@
                     "block": "output",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -1160,7 +1160,7 @@
                     "block": "half_bridge",
                     "port": "power.vcc"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1171,7 +1171,7 @@
                     "block": "current_sensor",
                     "port": "input.p"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1182,7 +1182,7 @@
                     "block": "current_sensor",
                     "port": "input.n"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1193,7 +1193,7 @@
                     "block": "current_sensor",
                     "port": "input.n"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -1332,7 +1332,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1343,7 +1343,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1365,7 +1365,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1376,7 +1376,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1387,7 +1387,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1478,7 +1478,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1489,7 +1489,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1511,7 +1511,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1522,7 +1522,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1533,7 +1533,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1604,7 +1604,7 @@
                     "block": "resistor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1615,7 +1615,7 @@
                     "block": "resistor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1626,7 +1626,7 @@
                     "block": "capacitor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1637,7 +1637,7 @@
                     "block": "capacitor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1648,7 +1648,7 @@
                     "block": "output",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -1759,7 +1759,7 @@
                     "block": "half_bridge",
                     "port": "power.vcc"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1770,7 +1770,7 @@
                     "block": "current_sensor",
                     "port": "input.p"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1781,7 +1781,7 @@
                     "block": "current_sensor",
                     "port": "input.n"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1792,7 +1792,7 @@
                     "block": "current_sensor",
                     "port": "input.n"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -1930,7 +1930,7 @@
                     "block": "power_gate",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1941,7 +1941,7 @@
                     "block": "c_boostrap_a",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1952,7 +1952,7 @@
                     "block": "c_boostrap_a",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1963,7 +1963,7 @@
                     "block": "c_boostrap_b",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1974,7 +1974,7 @@
                     "block": "c_boostrap_b",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1985,7 +1985,7 @@
                     "block": "c_boostrap_c",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -1996,7 +1996,7 @@
                     "block": "c_boostrap_c",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2257,7 +2257,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2268,7 +2268,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2290,7 +2290,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2301,7 +2301,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2312,7 +2312,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2356,7 +2356,7 @@
                     "block": "cap",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2443,7 +2443,7 @@
                     "block": "opamp",
                     "port": "non_inverting"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2454,7 +2454,7 @@
                     "block": "bias_div",
                     "port": "output.io"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2465,7 +2465,7 @@
                     "block": "opamp",
                     "port": "output"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -2476,7 +2476,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -2975,7 +2975,7 @@
                     "block": "power_gate",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3165,7 +3165,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3176,7 +3176,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3198,7 +3198,7 @@
                     "block": "top",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3209,7 +3209,7 @@
                     "block": "bottom",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3220,7 +3220,7 @@
                     "block": "r_top",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3316,7 +3316,7 @@
                     "block": "power_out",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3327,7 +3327,7 @@
                     "block": "ic",
                     "port": "VIN"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3338,7 +3338,7 @@
                     "block": "ic",
                     "port": "GND"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3349,7 +3349,7 @@
                     "block": "ic",
                     "port": "VIN"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3393,7 +3393,7 @@
                     "block": "ic",
                     "port": "FB"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3426,7 +3426,7 @@
                     "block": "inductor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3448,7 +3448,7 @@
                     "block": "power_out",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -3459,7 +3459,7 @@
                     "block": "ic",
                     "port": "SW"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -3487,7 +3487,7 @@
                     "block": "power_out",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -3515,7 +3515,7 @@
                     "block": "power_out",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -4022,7 +4022,7 @@
                     "block": "ic",
                     "port": "PA7"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4033,7 +4033,7 @@
                     "block": "ic",
                     "port": "PA6"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4044,7 +4044,7 @@
                     "block": "ic",
                     "port": "PA5"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4055,7 +4055,7 @@
                     "block": "ic",
                     "port": "PA4"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4066,7 +4066,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4077,7 +4077,7 @@
                     "block": "ic",
                     "port": "PB15"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4088,7 +4088,7 @@
                     "block": "ic",
                     "port": "PB14"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4099,7 +4099,7 @@
                     "block": "ic",
                     "port": "PB13"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4110,7 +4110,7 @@
                     "block": "ic",
                     "port": "PB12"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4121,7 +4121,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4132,7 +4132,7 @@
                     "block": "ic",
                     "port": "PB5"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4143,7 +4143,7 @@
                     "block": "ic",
                     "port": "PB4"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4154,7 +4154,7 @@
                     "block": "ic",
                     "port": "PB3"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4165,7 +4165,7 @@
                     "block": "ic",
                     "port": "PA4"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4176,7 +4176,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4187,7 +4187,7 @@
                     "block": "ic",
                     "port": "PB7"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4198,7 +4198,7 @@
                     "block": "ic",
                     "port": "PA15"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4209,7 +4209,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4220,7 +4220,7 @@
                     "block": "ic",
                     "port": "PA9"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4231,7 +4231,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4242,7 +4242,7 @@
                     "block": "ic",
                     "port": "PB5"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4253,7 +4253,7 @@
                     "block": "ic",
                     "port": "PB3"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4264,7 +4264,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4275,7 +4275,7 @@
                     "block": "ic",
                     "port": "PB5"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4286,7 +4286,7 @@
                     "block": "ic",
                     "port": "PB6"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4297,7 +4297,7 @@
                     "block": "ic",
                     "port": "PA13"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4308,7 +4308,7 @@
                     "block": "ic",
                     "port": "PA14"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4319,7 +4319,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4385,7 +4385,7 @@
                     "block": "ic",
                     "port": "PB8_BOOT0"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4396,7 +4396,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4407,7 +4407,7 @@
                     "block": "ic",
                     "port": "PA0"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4418,7 +4418,7 @@
                     "block": "ic",
                     "port": "PA1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4429,7 +4429,7 @@
                     "block": "ic",
                     "port": "PA2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4440,7 +4440,7 @@
                     "block": "ic",
                     "port": "PA3"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4451,7 +4451,7 @@
                     "block": "ic",
                     "port": "PA4"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4462,7 +4462,7 @@
                     "block": "ic",
                     "port": "PA5"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4473,7 +4473,7 @@
                     "block": "ic",
                     "port": "PA6"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4484,7 +4484,7 @@
                     "block": "ic",
                     "port": "PA7"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4495,7 +4495,7 @@
                     "block": "ic",
                     "port": "PA8"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4506,7 +4506,7 @@
                     "block": "ic",
                     "port": "PA9"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4517,7 +4517,7 @@
                     "block": "ic",
                     "port": "PA10"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4528,7 +4528,7 @@
                     "block": "ic",
                     "port": "PA11"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4539,7 +4539,7 @@
                     "block": "ic",
                     "port": "PA12"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4550,7 +4550,7 @@
                     "block": "ic",
                     "port": "PA13"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4561,7 +4561,7 @@
                     "block": "ic",
                     "port": "PA14"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4572,7 +4572,7 @@
                     "block": "ic",
                     "port": "PA15"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4583,7 +4583,7 @@
                     "block": "PA0",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4594,7 +4594,7 @@
                     "block": "PA1",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4605,7 +4605,7 @@
                     "block": "PA2",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4616,7 +4616,7 @@
                     "block": "PA3",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4627,7 +4627,7 @@
                     "block": "PA4",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4638,7 +4638,7 @@
                     "block": "PA5",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4649,7 +4649,7 @@
                     "block": "PA6",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4660,7 +4660,7 @@
                     "block": "PA7",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4671,7 +4671,7 @@
                     "block": "PA8",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4682,7 +4682,7 @@
                     "block": "PA9",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4693,7 +4693,7 @@
                     "block": "PA10",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4704,7 +4704,7 @@
                     "block": "PA11",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4715,7 +4715,7 @@
                     "block": "PA12",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4726,7 +4726,7 @@
                     "block": "PA13",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4737,7 +4737,7 @@
                     "block": "PA14",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4748,7 +4748,7 @@
                     "block": "PA15",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4759,7 +4759,7 @@
                     "block": "ic",
                     "port": "PB0"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4770,7 +4770,7 @@
                     "block": "ic",
                     "port": "PB1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4781,7 +4781,7 @@
                     "block": "ic",
                     "port": "PB2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4792,7 +4792,7 @@
                     "block": "ic",
                     "port": "PB3"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4803,7 +4803,7 @@
                     "block": "ic",
                     "port": "PB4"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4814,7 +4814,7 @@
                     "block": "ic",
                     "port": "PB5"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4825,7 +4825,7 @@
                     "block": "ic",
                     "port": "PB6"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4836,7 +4836,7 @@
                     "block": "ic",
                     "port": "PB7"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4847,7 +4847,7 @@
                     "block": "ic",
                     "port": "PB8_BOOT0"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4858,7 +4858,7 @@
                     "block": "ic",
                     "port": "PB9"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4869,7 +4869,7 @@
                     "block": "ic",
                     "port": "PB10"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4880,7 +4880,7 @@
                     "block": "ic",
                     "port": "PB11"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4891,7 +4891,7 @@
                     "block": "ic",
                     "port": "PB12"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4902,7 +4902,7 @@
                     "block": "ic",
                     "port": "PB13"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4913,7 +4913,7 @@
                     "block": "ic",
                     "port": "PB14"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4924,7 +4924,7 @@
                     "block": "ic",
                     "port": "PB15"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4935,7 +4935,7 @@
                     "block": "PB0",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4946,7 +4946,7 @@
                     "block": "PB1",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4957,7 +4957,7 @@
                     "block": "PB2",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4968,7 +4968,7 @@
                     "block": "PB3",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4979,7 +4979,7 @@
                     "block": "PB4",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -4990,7 +4990,7 @@
                     "block": "PB5",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5001,7 +5001,7 @@
                     "block": "PB6",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5012,7 +5012,7 @@
                     "block": "PB7",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5023,7 +5023,7 @@
                     "block": "PB8_BOOT0",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5034,7 +5034,7 @@
                     "block": "PB9",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5045,7 +5045,7 @@
                     "block": "PB10",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5056,7 +5056,7 @@
                     "block": "PB11",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5067,7 +5067,7 @@
                     "block": "PB12",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5078,7 +5078,7 @@
                     "block": "PB13",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5089,7 +5089,7 @@
                     "block": "PB14",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5100,7 +5100,7 @@
                     "block": "PB15",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5111,7 +5111,7 @@
                     "block": "ic",
                     "port": "PC4"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5122,7 +5122,7 @@
                     "block": "ic",
                     "port": "PC6"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5133,7 +5133,7 @@
                     "block": "ic",
                     "port": "PC10"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5144,7 +5144,7 @@
                     "block": "ic",
                     "port": "PC11"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5155,7 +5155,7 @@
                     "block": "ic",
                     "port": "PC13"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5166,7 +5166,7 @@
                     "block": "ic",
                     "port": "PC14_OSC32_IN"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5177,7 +5177,7 @@
                     "block": "ic",
                     "port": "PC15_OSC32_OUT"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5188,7 +5188,7 @@
                     "block": "PC4",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5199,7 +5199,7 @@
                     "block": "PC6",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5210,7 +5210,7 @@
                     "block": "PC10",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5221,7 +5221,7 @@
                     "block": "PC11",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5232,7 +5232,7 @@
                     "block": "PC13",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5243,7 +5243,7 @@
                     "block": "PC14_OSC32_IN",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5254,7 +5254,7 @@
                     "block": "PC15_OSC32_OUT",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5265,7 +5265,7 @@
                     "block": "ic",
                     "port": "PF0_OSC_IN"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5276,7 +5276,7 @@
                     "block": "ic",
                     "port": "PF1_OSC_OUT"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5287,7 +5287,7 @@
                     "block": "PF0_OSC_IN",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5298,7 +5298,7 @@
                     "block": "PF1_OSC_OUT",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5309,7 +5309,7 @@
                     "block": "ic",
                     "port": "PG10_NRST"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5320,7 +5320,7 @@
                     "block": "PG10_NRST",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5331,7 +5331,7 @@
                     "block": "ic",
                     "port": "PA12"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5342,7 +5342,7 @@
                     "block": "ic",
                     "port": "PA11"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -5739,7 +5739,7 @@
                     "block": "ic",
                     "port": "A"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5750,7 +5750,7 @@
                     "block": "ic",
                     "port": "B"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5761,7 +5761,7 @@
                     "block": "ic",
                     "port": "Z"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5772,7 +5772,7 @@
                     "block": "ic",
                     "port": "MGH"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5783,7 +5783,7 @@
                     "block": "encoder_a",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5794,7 +5794,7 @@
                     "block": "encoder_b",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5805,7 +5805,7 @@
                     "block": "encoder_z",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5816,7 +5816,7 @@
                     "block": "mag_high",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -5908,7 +5908,7 @@
                     "block": "power",
                     "port": "vcc"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5919,7 +5919,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5930,7 +5930,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5941,7 +5941,7 @@
                     "block": "usb2",
                     "port": "dm"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5952,7 +5952,7 @@
                     "block": "usb2",
                     "port": "dm"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5963,7 +5963,7 @@
                     "block": "usb2",
                     "port": "dp"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5974,7 +5974,7 @@
                     "block": "usb2",
                     "port": "dp"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5985,7 +5985,7 @@
                     "block": "cc1_res",
                     "port": "p1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -5996,7 +5996,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6007,7 +6007,7 @@
                     "block": "cc2_res",
                     "port": "p1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6018,7 +6018,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -6056,7 +6056,7 @@
                     "block": "resistor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6067,7 +6067,7 @@
                     "block": "resistor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6078,7 +6078,7 @@
                     "block": "capacitor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6089,7 +6089,7 @@
                     "block": "capacitor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6100,7 +6100,7 @@
                     "block": "output",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -6138,7 +6138,7 @@
                     "block": "resistor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6149,7 +6149,7 @@
                     "block": "resistor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6160,7 +6160,7 @@
                     "block": "capacitor",
                     "port": "1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6171,7 +6171,7 @@
                     "block": "capacitor",
                     "port": "2"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6182,7 +6182,7 @@
                     "block": "output",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },
@@ -6393,7 +6393,7 @@
                     "block": "pulldown",
                     "port": "p1"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6404,7 +6404,7 @@
                     "block": "btn",
                     "port": "in"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6415,7 +6415,7 @@
                     "block": "power",
                     "port": "vcc"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6426,7 +6426,7 @@
                     "block": "btn",
                     "port": "in"
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6437,7 +6437,7 @@
                     "block": "out",
                     "port": ""
                 },
-                "type": "interface"
+                "type": "signal"
             },
             {
                 "source": {
@@ -6448,7 +6448,7 @@
                     "block": "power",
                     "port": "gnd"
                 },
-                "type": "interface"
+                "type": "signal"
             }
         ]
     },

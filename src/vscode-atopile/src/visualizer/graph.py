@@ -20,16 +20,19 @@ for module in data:
 
     for block in data[module]["blocks"]:
         if block["type"] == "interface":
-            g.node(block["name"], shape='point', style='filled', fillcolor='blue', xlabel=f"<<font point-size='8'>{block['instance_of']}<br/>{block['name']}</font>>")
+            g.node(block["name"], shape='point', style='filled', fillcolor='blue', xlabel=f"<<font point-size='8'><i>{block['instance_of']}</i><br/><b>{block['name']}</b></font>>")
         elif block["type"] == "module":
-            g.node(block["name"], shape='box', style='filled', fillcolor='lightgreen', label=f"<{block['instance_of']}<br/><b>{block['name']}</b>>")
+            g.node(block["name"], shape='box', style='filled', fillcolor='lightgreen', label=f"<<font point-size='8'><i>{block['instance_of']}</i></font><font point-size='10'><br/><b>{block['name']}</b></font>>")
         elif block["type"] == "component":
-            g.node(block["name"], shape='box', style='filled', fillcolor='lightyellow', label=f"<{block['instance_of']}<br/><b>{block['name']}</b>>")
+            g.node(block["name"], shape='box', style='filled', fillcolor='lightyellow', label=f"<<font point-size='8'><i>{block['instance_of']}</i></font><font point-size='10'><br/><b>{block['name']}</b></font>>")
         else:
-            g.node(block["name"], shape='point', style='filled', fillcolor='gray', xlabel=f"<<font point-size='8'>{block['instance_of']}<br/>{block['name']}</font>>")
+            g.node(block["name"], shape='point', style='filled', fillcolor='gray', xlabel=f"<<b><font point-size='8'>{block['name']}</font></b>>")
 
     for link in data[module]["links"]:
-        g.edge(link["source"]["block"], link["target"]["block"])
+        if link["type"] == "signal":
+            g.edge(f"{link['source']['block']}", f"{link['target']['block']}", style='dashed')
+        else:
+            g.edge(f"{link['source']['block']}", f"{link['target']['block']}")
 
 
     # Optional: Add more attributes to style the graph
