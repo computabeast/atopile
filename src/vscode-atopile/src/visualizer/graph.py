@@ -12,17 +12,28 @@ def open_data():
         data = json.load(file)
     return data
 
-# Create a new undirected graph
-g = Graph('G', filename='undirected_graph.gv', engine='neato')
-
 data = open_data()
 
-for link in data["ios"]["links"]:
-    g.edge(link["source"]["block"], link["target"]["block"])
+for module in data:
+    # Create a new undirected graph
+    g = Graph('G', filename=f"{module}.gv", engine='neato')
+
+    for block in data[module]["blocks"]:
+        if block["type"] == "interface":
+            g.node(block["name"], shape='point', style='filled', fillcolor='blue', xlabel=f"<<font point-size='8'>{block['instance_of']}, {block['name']}</font>>")
+        elif block["type"] == "module":
+            g.node(block["name"], shape='box', style='filled', fillcolor='lightgreen', label=f"<{block['instance_of']}<br/><b>{block['name']}</b>>")
+        elif block["type"] == "component":
+            g.node(block["name"], shape='box', style='filled', fillcolor='lightyellow', label=f"<{block['instance_of']}<br/><b>{block['name']}</b>>")
+        else:
+            g.node(block["name"], shape='point', style='filled', fillcolor='gray', xlabel=f"<<font point-size='8'>{block['instance_of']}, {block['name']}</font>>")
+
+    for link in data[module]["links"]:
+        g.edge(link["source"]["block"], link["target"]["block"])
 
 
-# Optional: Add more attributes to style the graph
-g.attr(overlap='false', splines='true')
+    # Optional: Add more attributes to style the graph
+    g.attr(overlap='false', splines='true')
 
-# Render the graph to an SVG file
-g.render(format='svg', view=True)
+    # Render the graph to an SVG file
+    g.render(format='svg', view=True)

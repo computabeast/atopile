@@ -4,27 +4,33 @@
         "blocks": [
             {
                 "name": "power_stage.phase_a.half_bridge.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.half_bridge.gate_high",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.half_bridge.gate_low",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.half_bridge.shunt_output",
-                "instance_of": "DiffPair"
+                "instance_of": "DiffPair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.half_bridge.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.half_bridge.ic",
-                "instance_of": "_DMT3009LDT_7"
+                "instance_of": "_DMT3009LDT_7",
+                "type": "component"
             }
         ],
         "links": [
@@ -79,35 +85,43 @@
         "blocks": [
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -217,35 +231,43 @@
         "blocks": [
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -355,19 +377,23 @@
         "blocks": [
             {
                 "name": "power_stage.phase_a.current_sensor.output_filter.input",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.output_filter.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.output_filter.capacitor",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.output_filter.resistor",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -433,47 +459,58 @@
         "blocks": [
             {
                 "name": "power_stage.phase_a.current_sensor.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.power_vref",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.input",
-                "instance_of": "DiffPair"
+                "instance_of": "DiffPair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.opamp",
-                "instance_of": "LMV321IDBVR"
+                "instance_of": "LMV321IDBVR",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.shunt",
-                "instance_of": "_shunt"
+                "instance_of": "_shunt",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.feedback_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.bias_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.output_filter",
-                "instance_of": "LowPassFilter"
+                "instance_of": "LowPassFilter",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.net_tie_p",
-                "instance_of": "nettie_250u"
+                "instance_of": "nettie_250u",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_a.current_sensor.net_tie_n",
-                "instance_of": "nettie_250u"
+                "instance_of": "nettie_250u",
+                "type": "component"
             }
         ],
         "links": [
@@ -495,19 +532,23 @@
         "blocks": [
             {
                 "name": "power_stage.phase_a.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.control",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a.half_bridge",
-                "instance_of": "DMT3009LDT_7"
+                "instance_of": "DMT3009LDT_7",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_a.current_sensor",
-                "instance_of": "LowSideCurrentSense"
+                "instance_of": "LowSideCurrentSense",
+                "type": "module"
             }
         ],
         "links": [
@@ -562,27 +603,33 @@
         "blocks": [
             {
                 "name": "power_stage.phase_b.half_bridge.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.half_bridge.gate_high",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.half_bridge.gate_low",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.half_bridge.shunt_output",
-                "instance_of": "DiffPair"
+                "instance_of": "DiffPair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.half_bridge.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.half_bridge.ic",
-                "instance_of": "_DMT3009LDT_7"
+                "instance_of": "_DMT3009LDT_7",
+                "type": "component"
             }
         ],
         "links": [
@@ -637,35 +684,43 @@
         "blocks": [
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -775,35 +830,43 @@
         "blocks": [
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -913,19 +976,23 @@
         "blocks": [
             {
                 "name": "power_stage.phase_b.current_sensor.output_filter.input",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.output_filter.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.output_filter.capacitor",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.output_filter.resistor",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -991,47 +1058,58 @@
         "blocks": [
             {
                 "name": "power_stage.phase_b.current_sensor.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.power_vref",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.input",
-                "instance_of": "DiffPair"
+                "instance_of": "DiffPair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.opamp",
-                "instance_of": "LMV321IDBVR"
+                "instance_of": "LMV321IDBVR",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.shunt",
-                "instance_of": "_shunt"
+                "instance_of": "_shunt",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.feedback_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.bias_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.output_filter",
-                "instance_of": "LowPassFilter"
+                "instance_of": "LowPassFilter",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.net_tie_p",
-                "instance_of": "nettie_250u"
+                "instance_of": "nettie_250u",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_b.current_sensor.net_tie_n",
-                "instance_of": "nettie_250u"
+                "instance_of": "nettie_250u",
+                "type": "component"
             }
         ],
         "links": [
@@ -1053,19 +1131,23 @@
         "blocks": [
             {
                 "name": "power_stage.phase_b.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.control",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_b.half_bridge",
-                "instance_of": "DMT3009LDT_7"
+                "instance_of": "DMT3009LDT_7",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_b.current_sensor",
-                "instance_of": "LowSideCurrentSense"
+                "instance_of": "LowSideCurrentSense",
+                "type": "module"
             }
         ],
         "links": [
@@ -1120,27 +1202,33 @@
         "blocks": [
             {
                 "name": "power_stage.phase_c.half_bridge.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.half_bridge.gate_high",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.half_bridge.gate_low",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.half_bridge.shunt_output",
-                "instance_of": "DiffPair"
+                "instance_of": "DiffPair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.half_bridge.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.half_bridge.ic",
-                "instance_of": "_DMT3009LDT_7"
+                "instance_of": "_DMT3009LDT_7",
+                "type": "component"
             }
         ],
         "links": [
@@ -1195,35 +1283,43 @@
         "blocks": [
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -1333,35 +1429,43 @@
         "blocks": [
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -1471,19 +1575,23 @@
         "blocks": [
             {
                 "name": "power_stage.phase_c.current_sensor.output_filter.input",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.output_filter.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.output_filter.capacitor",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.output_filter.resistor",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -1549,47 +1657,58 @@
         "blocks": [
             {
                 "name": "power_stage.phase_c.current_sensor.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.power_vref",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.input",
-                "instance_of": "DiffPair"
+                "instance_of": "DiffPair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.opamp",
-                "instance_of": "LMV321IDBVR"
+                "instance_of": "LMV321IDBVR",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.shunt",
-                "instance_of": "_shunt"
+                "instance_of": "_shunt",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.feedback_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.bias_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.output_filter",
-                "instance_of": "LowPassFilter"
+                "instance_of": "LowPassFilter",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.net_tie_p",
-                "instance_of": "nettie_250u"
+                "instance_of": "nettie_250u",
+                "type": "component"
             },
             {
                 "name": "power_stage.phase_c.current_sensor.net_tie_n",
-                "instance_of": "nettie_250u"
+                "instance_of": "nettie_250u",
+                "type": "component"
             }
         ],
         "links": [
@@ -1611,19 +1730,23 @@
         "blocks": [
             {
                 "name": "power_stage.phase_c.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.control",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_c.half_bridge",
-                "instance_of": "DMT3009LDT_7"
+                "instance_of": "DMT3009LDT_7",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_c.current_sensor",
-                "instance_of": "LowSideCurrentSense"
+                "instance_of": "LowSideCurrentSense",
+                "type": "module"
             }
         ],
         "links": [
@@ -1678,99 +1801,123 @@
         "blocks": [
             {
                 "name": "power_stage.gate_driver.power_gate",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.enable",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.input_low_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.input_low_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.input_low_c",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.input_high_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.input_high_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.input_high_c",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_low_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_low_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_low_c",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_high_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_high_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_high_c",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_sense_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_sense_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.output_sense_c",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.mode",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.gate_driver.ic",
-                "instance_of": "_DRV8300DRGER"
+                "instance_of": "_DRV8300DRGER",
+                "type": "component"
             },
             {
                 "name": "power_stage.gate_driver.bypass_cap",
-                "instance_of": "_BypassCap"
+                "instance_of": "_BypassCap",
+                "type": "component"
             },
             {
                 "name": "power_stage.gate_driver.c_boostrap_a",
-                "instance_of": "_BypassCap"
+                "instance_of": "_BypassCap",
+                "type": "component"
             },
             {
                 "name": "power_stage.gate_driver.c_boostrap_b",
-                "instance_of": "_BypassCap"
+                "instance_of": "_BypassCap",
+                "type": "component"
             },
             {
                 "name": "power_stage.gate_driver.c_boostrap_c",
-                "instance_of": "_BypassCap"
+                "instance_of": "_BypassCap",
+                "type": "component"
             },
             {
                 "name": "power_stage.gate_driver.r_deadtime",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -2056,39 +2203,48 @@
         "blocks": [
             {
                 "name": "power_stage.voltage_reference.bias_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div.cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -2220,23 +2376,28 @@
         "blocks": [
             {
                 "name": "power_stage.voltage_reference.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.voltage_reference.output",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.voltage_reference.opamp",
-                "instance_of": "LMV321IDBVR"
+                "instance_of": "LMV321IDBVR",
+                "type": "component"
             },
             {
                 "name": "power_stage.voltage_reference.bias_div",
-                "instance_of": "VDivLowPassFilter"
+                "instance_of": "VDivLowPassFilter",
+                "type": "module"
             },
             {
                 "name": "power_stage.voltage_reference.bypass_cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -2324,87 +2485,108 @@
         "blocks": [
             {
                 "name": "power_stage.bulk_caps.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.bulk_caps.cap1",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap2",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap3",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap4",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap5",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap6",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap7",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap8",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap9",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap10",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap11",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap12",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap13",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap14",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap15",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap16",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap17",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap18",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap19",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             },
             {
                 "name": "power_stage.bulk_caps.cap20",
-                "instance_of": "BulkCapacitor"
+                "instance_of": "BulkCapacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -2635,43 +2817,53 @@
         "blocks": [
             {
                 "name": "power_stage.power_batt",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.power_gate",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.power3v3",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_stage.enable",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_stage.phase_a",
-                "instance_of": "Phase"
+                "instance_of": "Phase",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_b",
-                "instance_of": "Phase"
+                "instance_of": "Phase",
+                "type": "module"
             },
             {
                 "name": "power_stage.phase_c",
-                "instance_of": "Phase"
+                "instance_of": "Phase",
+                "type": "module"
             },
             {
                 "name": "power_stage.gate_driver",
-                "instance_of": "DRV8300"
+                "instance_of": "DRV8300",
+                "type": "module"
             },
             {
                 "name": "power_stage.voltage_reference",
-                "instance_of": "VoltageReference"
+                "instance_of": "VoltageReference",
+                "type": "module"
             },
             {
                 "name": "power_stage.bulk_caps",
-                "instance_of": "CapBank"
+                "instance_of": "CapBank",
+                "type": "module"
             }
         ],
         "links": [
@@ -2924,35 +3116,43 @@
         "blocks": [
             {
                 "name": "power_supply.buck.feedback_div.top",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_supply.buck.feedback_div.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_supply.buck.feedback_div.bottom",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "power_supply.buck.feedback_div.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "power_supply.buck.feedback_div.in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.buck.feedback_div.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.buck.feedback_div.r_top",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "power_supply.buck.feedback_div.r_bottom",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -3062,39 +3262,48 @@
         "blocks": [
             {
                 "name": "power_supply.buck.power_in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.buck.power_out",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.buck.feedback_div",
-                "instance_of": "_VDiv"
+                "instance_of": "_VDiv",
+                "type": "module"
             },
             {
                 "name": "power_supply.buck.ic",
-                "instance_of": "LV2842XLVDDCR"
+                "instance_of": "LV2842XLVDDCR",
+                "type": "component"
             },
             {
                 "name": "power_supply.buck.diode",
-                "instance_of": "SchottkyDiode"
+                "instance_of": "SchottkyDiode",
+                "type": "component"
             },
             {
                 "name": "power_supply.buck.input_cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "power_supply.buck.output_cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "power_supply.buck.inductor",
-                "instance_of": "Inductor"
+                "instance_of": "Inductor",
+                "type": "component"
             },
             {
                 "name": "power_supply.buck.boot_cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -3259,11 +3468,13 @@
         "blocks": [
             {
                 "name": "power_supply.ldo5V.power_in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.ldo5V.power_out",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             }
         ],
         "links": [
@@ -3285,11 +3496,13 @@
         "blocks": [
             {
                 "name": "power_supply.ldo3V3.power_in",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.ldo3V3.power_out",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             }
         ],
         "links": [
@@ -3311,15 +3524,18 @@
         "blocks": [
             {
                 "name": "power_supply.power_or.power_usb",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.power_or.power_ldo",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.power_or.power_out",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             }
         ],
         "links": []
@@ -3329,39 +3545,48 @@
         "blocks": [
             {
                 "name": "power_supply.power_batt",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.power_usb",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.power_gate",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.power5v",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.power3v3",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "power_supply.buck",
-                "instance_of": "LV2842Kit"
+                "instance_of": "LV2842Kit",
+                "type": "module"
             },
             {
                 "name": "power_supply.ldo5V",
-                "instance_of": "LDO"
+                "instance_of": "LDO",
+                "type": "module"
             },
             {
                 "name": "power_supply.ldo3V3",
-                "instance_of": "LDO"
+                "instance_of": "LDO",
+                "type": "module"
             },
             {
                 "name": "power_supply.power_or",
-                "instance_of": "PowerOR"
+                "instance_of": "PowerOR",
+                "type": "module"
             }
         ],
         "links": [
@@ -3460,239 +3685,298 @@
         "blocks": [
             {
                 "name": "micro.micro.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.can_ttl",
-                "instance_of": "CAN_TTL"
+                "instance_of": "CAN_TTL",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.swd",
-                "instance_of": "SWD"
+                "instance_of": "SWD",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.spi1",
-                "instance_of": "SPI"
+                "instance_of": "SPI",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.spi2",
-                "instance_of": "SPI"
+                "instance_of": "SPI",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.spi3",
-                "instance_of": "SPI"
+                "instance_of": "SPI",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.i2c1",
-                "instance_of": "I2C"
+                "instance_of": "I2C",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.i2c2",
-                "instance_of": "I2C"
+                "instance_of": "I2C",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.i2c3",
-                "instance_of": "I2C"
+                "instance_of": "I2C",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.ic",
-                "instance_of": "_STM32G431CBU6"
+                "instance_of": "_STM32G431CBU6",
+                "type": "component"
             },
             {
                 "name": "micro.micro.bypass_cap_1",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "micro.micro.bypass_cap_2",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "micro.micro.bypass_cap_3",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "micro.micro.bypass_cap_4",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "micro.micro.bypass_cap_5",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "micro.micro.boot0_pulldown",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "micro.micro.PA0",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA1",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA2",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA3",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA4",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA5",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA6",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA7",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA8",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA9",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA10",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA11",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA12",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA13",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA14",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PA15",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB0",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB1",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB2",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB3",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB4",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB5",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB6",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB7",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB8_BOOT0",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB9",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB10",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB11",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB12",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB13",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB14",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PB15",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC4",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC6",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC10",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC11",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC13",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC14_OSC32_IN",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PC15_OSC32_OUT",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PF0_OSC_IN",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PF1_OSC_OUT",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.PG10_NRST",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro.usb2",
-                "instance_of": "USB2"
+                "instance_of": "USB2",
+                "type": "interface"
             }
         ],
         "links": [
@@ -5067,23 +5351,28 @@
         "blocks": [
             {
                 "name": "micro.can_tranciever.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "micro.can_tranciever.can_ttl",
-                "instance_of": "CAN_TTL"
+                "instance_of": "CAN_TTL",
+                "type": "interface"
             },
             {
                 "name": "micro.can_tranciever.can",
-                "instance_of": "CAN"
+                "instance_of": "CAN",
+                "type": "interface"
             },
             {
                 "name": "micro.can_tranciever.ic",
-                "instance_of": "_SN65HVD230DR"
+                "instance_of": "_SN65HVD230DR",
+                "type": "component"
             },
             {
                 "name": "micro.can_tranciever.bypass_cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -5138,67 +5427,83 @@
         "blocks": [
             {
                 "name": "micro.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "micro.i2c",
-                "instance_of": "I2C"
+                "instance_of": "I2C",
+                "type": "interface"
             },
             {
                 "name": "micro.led",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.usb2",
-                "instance_of": "USB2"
+                "instance_of": "USB2",
+                "type": "interface"
             },
             {
                 "name": "micro.can",
-                "instance_of": "CAN"
+                "instance_of": "CAN",
+                "type": "interface"
             },
             {
                 "name": "micro.button",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.spi",
-                "instance_of": "SPI"
+                "instance_of": "SPI",
+                "type": "interface"
             },
             {
                 "name": "micro.phase_a_control",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.phase_b_control",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.phase_c_control",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.phase_a_current",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.phase_b_current",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.phase_c_current",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.driver_enable",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "micro.micro",
-                "instance_of": "STM32G431CBU6_USB2"
+                "instance_of": "STM32G431CBU6_USB2",
+                "type": "module"
             },
             {
                 "name": "micro.can_tranciever",
-                "instance_of": "SN65HVD230DR"
+                "instance_of": "SN65HVD230DR",
+                "type": "module"
             }
         ],
         "links": [
@@ -5352,35 +5657,43 @@
         "blocks": [
             {
                 "name": "position_sensor.ma732.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732.spi",
-                "instance_of": "SPI"
+                "instance_of": "SPI",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732.encoder_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732.encoder_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732.encoder_z",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732.mag_high",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732.ic",
-                "instance_of": "_MA732"
+                "instance_of": "_MA732",
+                "type": "component"
             },
             {
                 "name": "position_sensor.ma732.cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -5512,15 +5825,18 @@
         "blocks": [
             {
                 "name": "position_sensor.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.spi",
-                "instance_of": "SPI"
+                "instance_of": "SPI",
+                "type": "interface"
             },
             {
                 "name": "position_sensor.ma732",
-                "instance_of": "MA732"
+                "instance_of": "MA732",
+                "type": "module"
             }
         ],
         "links": [
@@ -5553,27 +5869,33 @@
         "blocks": [
             {
                 "name": "ios.usbc_connector.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.usbc_connector.usb2",
-                "instance_of": "USB2"
+                "instance_of": "USB2",
+                "type": "interface"
             },
             {
                 "name": "ios.usbc_connector.gnd",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "ios.usbc_connector.conn",
-                "instance_of": "KH_TYPE_C_16P"
+                "instance_of": "KH_TYPE_C_16P",
+                "type": "component"
             },
             {
                 "name": "ios.usbc_connector.cc1_res",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             },
             {
                 "name": "ios.usbc_connector.cc2_res",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -5705,19 +6027,23 @@
         "blocks": [
             {
                 "name": "ios.voltage_sense_filter.input",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.voltage_sense_filter.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.voltage_sense_filter.capacitor",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "ios.voltage_sense_filter.resistor",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -5783,33 +6109,26 @@
         "blocks": [
             {
                 "name": "ios.temperature_sense_filter.input",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.temperature_sense_filter.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.temperature_sense_filter.capacitor",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             },
             {
                 "name": "ios.temperature_sense_filter.resistor",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
-            {
-                "source": {
-                    "block": "ios.xt30_connector_2",
-                    "port": "io"
-                },
-                "target": {
-                    "block": "ios.out_b",
-                    "port": "1"
-                },
-                "type": "interface"
-            },
             {
                 "source": {
                     "block": "ios.temperature_sense_filter.input",
@@ -5872,23 +6191,28 @@
         "blocks": [
             {
                 "name": "ios.led1.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.led1.data_in",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.led1.data_out",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.led1.ic",
-                "instance_of": "_SK6805SIDE"
+                "instance_of": "_SK6805SIDE",
+                "type": "component"
             },
             {
                 "name": "ios.led1.cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -5943,23 +6267,28 @@
         "blocks": [
             {
                 "name": "ios.led2.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.led2.data_in",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.led2.data_out",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.led2.ic",
-                "instance_of": "_SK6805SIDE"
+                "instance_of": "_SK6805SIDE",
+                "type": "component"
             },
             {
                 "name": "ios.led2.cap",
-                "instance_of": "Capacitor"
+                "instance_of": "Capacitor",
+                "type": "component"
             }
         ],
         "links": [
@@ -6014,11 +6343,13 @@
         "blocks": [
             {
                 "name": "ios.button_pulldown.btn.in",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "ios.button_pulldown.btn.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             }
         ],
         "links": []
@@ -6028,23 +6359,28 @@
         "blocks": [
             {
                 "name": "ios.button_pulldown.btn",
-                "instance_of": "NoButton"
+                "instance_of": "NoButton",
+                "type": "module"
             },
             {
                 "name": "ios.button_pulldown.out",
-                "instance_of": "Signal"
+                "instance_of": "Signal",
+                "type": "signal"
             },
             {
                 "name": "ios.button_pulldown.output",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.button_pulldown.power",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.button_pulldown.pulldown",
-                "instance_of": "Resistor"
+                "instance_of": "Resistor",
+                "type": "component"
             }
         ],
         "links": [
@@ -6121,125 +6457,141 @@
         "blocks": [
             {
                 "name": "ios.power_batt",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.power_usb",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.power5v",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.power3v3",
-                "instance_of": "Power"
+                "instance_of": "Power",
+                "type": "interface"
             },
             {
                 "name": "ios.i2c",
-                "instance_of": "I2C"
+                "instance_of": "I2C",
+                "type": "interface"
             },
             {
                 "name": "ios.can",
-                "instance_of": "CAN"
+                "instance_of": "CAN",
+                "type": "interface"
             },
             {
                 "name": "ios.button",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.led",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.usb2",
-                "instance_of": "USB2"
+                "instance_of": "USB2",
+                "type": "interface"
             },
             {
                 "name": "ios.out_a",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.out_b",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.out_c",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.batt_sense",
-                "instance_of": "Pair"
+                "instance_of": "Pair",
+                "type": "interface"
             },
             {
                 "name": "ios.usbc_connector",
-                "instance_of": "USBCConn"
+                "instance_of": "USBCConn",
+                "type": "module"
             },
             {
                 "name": "ios.xt30_connector_1",
-                "instance_of": "XT30_Male_Right_Angle"
+                "instance_of": "XT30_Male_Right_Angle",
+                "type": "component"
             },
             {
                 "name": "ios.xt30_connector_2",
-                "instance_of": "XT30_Male_Right_Angle"
+                "instance_of": "XT30_Male_Right_Angle",
+                "type": "component"
             },
             {
                 "name": "ios.i2c_connector",
-                "instance_of": "QwiicConnector"
+                "instance_of": "QwiicConnector",
+                "type": "component"
             },
             {
                 "name": "ios.can_connector_1",
-                "instance_of": "JSTGH4Pin"
+                "instance_of": "JSTGH4Pin",
+                "type": "component"
             },
             {
                 "name": "ios.can_connector_2",
-                "instance_of": "JSTGH4Pin"
+                "instance_of": "JSTGH4Pin",
+                "type": "component"
             },
             {
                 "name": "ios.voltage_sense_filter",
-                "instance_of": "LowPassFilter"
+                "instance_of": "LowPassFilter",
+                "type": "module"
             },
             {
                 "name": "ios.temperature_sense_filter",
-                "instance_of": "LowPassFilter"
+                "instance_of": "LowPassFilter",
+                "type": "module"
             },
             {
                 "name": "ios.pad_out_a",
-                "instance_of": "PowerPad"
+                "instance_of": "PowerPad",
+                "type": "component"
             },
             {
                 "name": "ios.pad_out_b",
-                "instance_of": "PowerPad"
+                "instance_of": "PowerPad",
+                "type": "component"
             },
             {
                 "name": "ios.pad_out_c",
-                "instance_of": "PowerPad"
+                "instance_of": "PowerPad",
+                "type": "component"
             },
             {
                 "name": "ios.led1",
-                "instance_of": "SK6805SIDE"
+                "instance_of": "SK6805SIDE",
+                "type": "module"
             },
             {
                 "name": "ios.led2",
-                "instance_of": "SK6805SIDE"
+                "instance_of": "SK6805SIDE",
+                "type": "module"
             },
             {
                 "name": "ios.button_pulldown",
-                "instance_of": "ButtonPulldown"
+                "instance_of": "ButtonPulldown",
+                "type": "module"
             }
         ],
         "links": [
-            {
-                "source": {
-                    "block": "ios.pad_out_a",
-                    "port": ""
-                },
-                "target": {
-                    "block": "ios.xt30_connector_2",
-                    "port": "power"
-                },
-                "type": "interface"
-            },
             {
                 "source": {
                     "block": "ios.power_batt",
@@ -6456,23 +6808,28 @@
         "blocks": [
             {
                 "name": "power_stage",
-                "instance_of": "PowerStage"
+                "instance_of": "PowerStage",
+                "type": "module"
             },
             {
                 "name": "power_supply",
-                "instance_of": "PowerSupply"
+                "instance_of": "PowerSupply",
+                "type": "module"
             },
             {
                 "name": "micro",
-                "instance_of": "Micro"
+                "instance_of": "Micro",
+                "type": "module"
             },
             {
                 "name": "position_sensor",
-                "instance_of": "PositionSensor"
+                "instance_of": "PositionSensor",
+                "type": "module"
             },
             {
                 "name": "ios",
-                "instance_of": "IOs"
+                "instance_of": "IOs",
+                "type": "module"
             }
         ],
         "links": [
