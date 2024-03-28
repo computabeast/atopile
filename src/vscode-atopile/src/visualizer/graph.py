@@ -20,13 +20,13 @@ for module in data:
 
     for block in data[module]["blocks"]:
         if block["type"] == "interface":
-            g.node(block["name"], shape='point', style='filled', fillcolor='blue', xlabel=f"<<font point-size='8'>{block['instance_of']}, {block['name']}</font>>")
+            g.node(block["name"], shape='point', style='filled', fillcolor='blue', xlabel=f"<<font point-size='8'>{block['instance_of']}<br/>{block['name']}</font>>")
         elif block["type"] == "module":
             g.node(block["name"], shape='box', style='filled', fillcolor='lightgreen', label=f"<{block['instance_of']}<br/><b>{block['name']}</b>>")
         elif block["type"] == "component":
             g.node(block["name"], shape='box', style='filled', fillcolor='lightyellow', label=f"<{block['instance_of']}<br/><b>{block['name']}</b>>")
         else:
-            g.node(block["name"], shape='point', style='filled', fillcolor='gray', xlabel=f"<<font point-size='8'>{block['instance_of']}, {block['name']}</font>>")
+            g.node(block["name"], shape='point', style='filled', fillcolor='gray', xlabel=f"<<font point-size='8'>{block['instance_of']}<br/>{block['name']}</font>>")
 
     for link in data[module]["links"]:
         g.edge(link["source"]["block"], link["target"]["block"])
