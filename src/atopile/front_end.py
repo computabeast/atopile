@@ -23,7 +23,7 @@ from atopile.datatypes import KeyOptItem, KeyOptMap, Ref, StackList
 from atopile.generic_methods import recurse
 from atopile.parse import parser
 from atopile.parse_utils import get_src_info_from_ctx
-from atopile.parser.AtopileParser import AtopileParser as ap
+from atopile.parser.AtopileParser import AtopileParser as ap, AtopileParser
 from atopile.parser.AtopileParserVisitor import AtopileParserVisitor
 
 
@@ -1045,7 +1045,7 @@ class Dizzy(HandleStmtsFunctional, HandlesPrimaries):
     def visitAssign_stmt(self, ctx: ap.Assign_stmtContext) -> KeyOptMap:
         assignable_ctx = ctx.assignable()
         assert isinstance(assignable_ctx, ap.AssignableContext)
-        if assignable_ctx.new_stmt():
+        if assignable_ctx.new_stmt() or assignable_ctx.arithmetic_expression():
             # ignore new statements here, we'll deal with them in future layers
             return KeyOptMap.empty()
 
@@ -1281,15 +1281,17 @@ class Lofty(HandleStmtsFunctional, HandlesPrimaries):
         if assignable_ctx.new_stmt():
             return self.handle_new_assignment(ctx)
 
-        ########## Handle Overrides ##########
-
+        ########## Handle Definitions + Declarations ##########
         # We've already dealt with direct assignments in the previous layer
-        if len(assigned_ref) == 1:
+        assignable: ap.AssignableContext = ctx.assignable()
+        if len(assigned_ref) == 1 and not assignable.arithmetic_expression():
             return KeyOptMap.empty()
 
+        ########## Handle Overrides ##########
         instance_addr_assigned_to = address.add_instances(
             self._instance_addr_stack.top, assigned_ref[:-1]
         )
+
         with _translate_addr_key_errors(ctx):
             instance_assigned_to = self._output_cache[instance_addr_assigned_to]
 
@@ -1391,18 +1393,12 @@ class Lofty(HandleStmtsFunctional, HandlesPrimaries):
     def visitAssert_stmt(self, ctx: ap.Assert_stmtContext) -> KeyOptMap:
         """Handle assertion statements."""
         comparison_ctx: ap.ComparisonContext = ctx.comparison()
-        roley = Roley(self._instance_addr_stack.top)
 
         expressions_ = []
         operators = []
 
         def _add_expr_from_context(ctx: ap.Arithmetic_expressionContext):
-            expr = Expression.from_numericish(
-                roley.visit(ctx)
-            )
-            # TODO: this shouldn't be attached to the expression like this
-            # as the only means to pretty-print them
-            expr.src_ctx = ctx
+            expr = self.visit(ctx)
             expressions_.append(expr)
 
         _add_expr_from_context(comparison_ctx.arithmetic_expression())
@@ -1432,7 +1428,20 @@ class Lofty(HandleStmtsFunctional, HandlesPrimaries):
 
         return KeyOptMap.empty()
 
+    def visitArithmetic_expression(
+        self, ctx: ap.Arithmetic_expressionContext
+    ) -> expressions.NumericishTypes:
+        """Yield a numericish value from an arithmetic expression context."""
+        # Create an instance of Roley to handle the expressions
+        roley = Roley(self._instance_addr_stack.top)
 
+        expr = Expression.from_numericish(
+            roley.visit(ctx)
+        )
+        # TODO: this shouldn't be attached to the expression like this
+        # as the only means to pretty-print them
+        expr.src_ctx = ctx
+        return expr
 
 
 scoop = Scoop(parser.get_ast_from_file)
