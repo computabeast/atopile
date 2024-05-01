@@ -163,19 +163,22 @@ const AtopileViewer = () => {
                     } else if (displayedNode['blocks'][node]['type'] == 'module') {
                         populatedNodes.push({ id: node, type: 'customNode', data: { title: node, instance_of: displayedNode['blocks'][node]['instance_of'], address: displayedNode['blocks'][node]['address'], type: displayedNode['blocks'][node]['type'], color: '#FB8500', handleExpandClick: handleExpandClick }, sourcePosition: Position.Bottom, targetPosition: Position.Right, position: position });
                     } else if (displayedNode['blocks'][node]['type'] == 'builtin') {
-                        populatedNodes.push({ id: node, type: 'builtinNode', data: {
-                            title: node,
-                            instance_of: displayedNode['blocks'][node]['instance_of'],
-                            address: displayedNode['blocks'][node]['address'],
-                            type: displayedNode['blocks'][node]['type'],
-                            value: displayedNode['blocks'][node]['value'],
-                            lib_key: displayedNode['blocks'][node]['lib_key'],
-                            color: '#FFFFFF', handleExpandClick: handleExpandClick },
+                        populatedNodes.push({
+                            id: node,
+                            type: 'builtinNode',
+                            data: {
+                                title: node,
+                                instance_of: displayedNode['blocks'][node]['instance_of'],
+                                address: displayedNode['blocks'][node]['address'],
+                                type: displayedNode['blocks'][node]['type'],
+                                value: displayedNode['blocks'][node]['value'],
+                                lib_key: displayedNode['blocks'][node]['lib_key'],
+                                color: '#FFFFFF'},
                             sourcePosition: Position.Bottom,
                             targetPosition: Position.Right,
                             position: position });
                     } else {
-                        populatedNodes.push({ id: node, type: 'customNode', data: { title: node, instance_of: displayedNode['blocks'][node]['instance_of'], address: displayedNode['blocks'][node]['address'], type: displayedNode['blocks'][node]['type'], color: '#FFB703', handleExpandClick: handleExpandClick }, sourcePosition: Position.Bottom, targetPosition: Position.Right, position: position });
+                        populatedNodes.push({ id: node, type: 'customNode', data: { title: node, instance_of: displayedNode['blocks'][node]['instance_of'], address: displayedNode['blocks'][node]['address'], type: displayedNode['blocks'][node]['type'], color: '#FFB703' }, sourcePosition: Position.Bottom, targetPosition: Position.Right, position: position });
                     }
                 }
                 // Assuming fetchedNodes is an array of nodes in the format expected by React Flow

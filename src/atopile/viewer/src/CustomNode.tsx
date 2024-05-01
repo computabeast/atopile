@@ -50,7 +50,7 @@ export const BuiltInNodeBlock = ({ data }: {data: NodeProps}) => {
                 position={Position.Top}
                 style={{background: '#555' }}
             />
-            <div onClick={() => data.handleExpandClick(data.address)} style={{ display: 'flex', padding: '10px', paddingTop: '4px', paddingBottom: '4px', borderRadius: '10px', backgroundColor: "#FFFFFF"}}>
+            <div onClick={data.isExpandable ? () => data.handleExpandClick(data.address) : undefined} style={{ display: 'flex', padding: '10px', paddingTop: '4px', paddingBottom: '4px', borderRadius: '10px', backgroundColor: "#FFFFFF"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 150 150">
                     {content}
                 </svg>
