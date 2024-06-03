@@ -2,19 +2,76 @@ import logging
 from functools import cache
 from pathlib import Path
 
+import requests
+from pydantic import BaseModel
+
+import atopile.config
 from atopile import address, errors, instance_methods
 from atopile.address import AddrStr
 from atopile.components import abstract
-from atopile.components.model import ATOPILE_COMPONENTS
-
 
 log = logging.getLogger(__name__)
+
+
+class Component(BaseModel):
+    __type__ = None  # Must be replaced in subclasses
+
+    address: AddrStr
+
+    mpn: str
+    footprint: str
+    get_user_facing_value: str
+
+
+def ensure_concrete_component(
+    component_model: abstract.Component,
+) -> Component:
+    """Fetch a concrete component from the lock-file or component server."""
+    # If the component is already concrete, return it
+    if component_model.mpn is not None:
+        return component_model
+
+    # Otherwise, see if it's in the lock-file
+    with atopile.config.lock_file_context() as lock_file:
+        selected_components = lock_file.setdefault("manufacturing_data", {})
+        component_key = repr(component_model)
+        if component_key in selected_components:
+            return component_model.__class__(lock_file[component_key])
+
+        # Otherwise, fetch it from the component server
+        concrete_component = fetch_component(component_model)
+        selected_components[component_key] = (
+            concrete_component.model_dump()
+        )  # Cache the component
+
+    return concrete_component
+
+
+def fetch_component(component_model: abstract.Component) -> Component:
+    """Fetch a component from the component server."""
+    api_query = component_model.to_api()
+    endpoint_base = atopile.config.get_project_context().config.services.components
+    endpoint = f"{endpoint_base}/{component_model.__endpoint__}"
+
+    # Make the noise!
+    try:
+        response = requests.post(endpoint, json=api_query.model_dump(), timeout=10)
+        response.raise_for_status()  # Raises an HTTPError if the response status code is 4xx or 5xx
+    except requests.HTTPError as ex:
+        if response.status_code == 404:
+            raise atopile.errors.AtoInfraError(
+                "Could not connect to server. Check internet, or please try again later!"
+            ) from ex
+        # TODO: handle component not found
+        raise atopile.errors.AtoInfraError from ex
+
+    return component_model.from_api(response.json()[0]["component_data"])
 
 
 # FIXME: in the future, we should have a model that provides this information throughout our pipeline
 # For the minute, let's use this function
 @cache
-def _get_component_data(component_addr: str) -> ATOPILE_COMPONENTS:
+def _get_component_data(component_addr: str) -> Component:
     """
     Return the MPN and data fields for a component given its address
     """

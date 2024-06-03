@@ -2,10 +2,9 @@
 Module to interact with the component server.
 """
 
-from typing import Optional
+from typing import Optional, TypeVar
 
-import requests
-from pydantic import BaseModel, ValidationError, model_validator
+from pydantic import BaseModel, ValidationError
 
 import atopile.config
 import atopile.errors
@@ -13,6 +12,7 @@ import atopile.front_end
 from atopile.address import AddrStr
 from atopile.front_end import RangedValue
 from atopile.instance_methods import get_data
+from atopile.components import server_api
 
 
 # why is this not defined in errors?
@@ -33,16 +33,48 @@ class NoMatchingComponent(atopile.errors.AtoError):
 class Component(BaseModel):
     __type__ = None  # Must be replaced in subclasses
 
+    address: AddrStr
+
     mpn: Optional[str]
     footprint: Optional[str] = None
     package: Optional[str] = None
 
+    def to_query(self) -> BaseModel:
+        """
+        Convert the component to a query object.
+        """
+        raise NotImplementedError
 
-class Resistor(BaseModel):
+
+T = TypeVar("T", bound=Component)
+_type_name_to_ato_map: dict[str, Component] = {}
+
+
+def _register_ato_type(cls: T) -> T:
+    _type_name_to_ato_map[cls.__type__] = cls
+    return cls
+
+
+@_register_ato_type
+class Resistor(Component):
     """Resistor component model."""
-    resistance_ohms_min: Optional[float] = None
-    rated_power_watts: Optional[float] = None
+
+    __type__ = "resistor"
+    value: Optional[RangedValue] = None
+    rated_power: Optional[RangedValue] = None
     rated_temp: RangedValue = None
+
+    def to_query(self) -> server_api.ResistorInput:
+        value_ohms = self.value.to("ohms")
+        rated_temp_c = self.rated_temp.to("celsius")
+
+        return server_api.ResistorInput(
+            address=self.address,
+            resistance_ohms_min=value_ohms.min_val,
+            resistance_ohms_max=value_ohms.max_val,
+            rated_temp_celsius_min=rated_temp_c.min_val,
+            rated_temp_celsius_max=rated_temp_c.max_val,
+        )
 
 
 def get_specd_value(addr: AddrStr) -> str:
@@ -55,65 +87,24 @@ def get_specd_value(addr: AddrStr) -> str:
         raise MissingData("$addr has no value", title="No value", addr=addr) from ex
 
 
-def construct_ato_model(ato_data: dict) -> model.Capacitor | model.Resistor | model.Inductor:
+def construct_ato_model(ato_data: dict) -> Component:
     """Make an API query from an ato data dictionary."""
     # In this case the component isn't generic, and there's no MPN provided
     # which means the user has neglected to provide one. We can't do anything
     # TODO: does this shove the error in the middle of querying the value, for
     # example? Shouldn't we be able to get the value independently of the MPN?
     if "__type__" not in ato_data:
-        raise TypeError
+        raise NotImplementedError
 
     type_name = ato_data["__type__"]
 
-    if type_name not in _type_name_to_ato_query_map:
+    if type_name not in _type_name_to_ato_map:
         raise atopile.errors.AtoTypeError(f"Unknown component type: {type_name}")
 
-    ato_type = _type_name_to_ato_query_map[type_name]
+    ato_type = _type_name_to_ato_map[type_name]
 
     # Find the schema for the API schema for the component
     try:
         return ato_type(**ato_data)
     except ValidationError as ex:
         raise atopile.errors.AtoError(f"Invalid component data: {ex}")
-
-
-def ensure_concrete_component(component_model: model.ATOPILE_COMPONENTS) -> model.ATOPILE_COMPONENTS:
-    """Fetch a concrete component from the lock-file or component server."""
-    # If the component is already concrete, return it
-    if component_model.mpn is not None:
-        return component_model
-
-    # Otherwise, see if it's in the lock-file
-    with atopile.config.lock_file_context() as lock_file:
-        selected_components = lock_file.setdefault("manufacturing_data", {})
-        component_key = repr(component_model)
-        if component_key in selected_components:
-            return component_model.__class__(lock_file[component_key])
-
-        # Otherwise, fetch it from the component server
-        concrete_component = fetch_component(component_model)
-        selected_components[component_key] = concrete_component.model_dump() # Cache the component
-
-    return concrete_component
-
-
-def fetch_component(component_model: model.ATOPILE_COMPONENTS) -> model.ATOPILE_COMPONENTS:
-    """Fetch a component from the component server."""
-    api_query = component_model.to_api()
-    endpoint_base = atopile.config.get_project_context().config.services.components
-    endpoint = f"{endpoint_base}/{component_model.__endpoint__}"
-
-    # Make the noise!
-    try:
-        response = requests.post(endpoint, json=api_query.model_dump(), timeout=10)
-        response.raise_for_status()  # Raises an HTTPError if the response status code is 4xx or 5xx
-    except requests.HTTPError as ex:
-        if response.status_code == 404:
-            raise atopile.errors.AtoInfraError(
-                "Could not connect to server. Check internet, or please try again later!"
-            ) from ex
-        # TODO: handle component not found
-        raise atopile.errors.AtoInfraError from ex
-
-    return component_model.from_api(response.json()[0]["component_data"])
