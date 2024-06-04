@@ -15,7 +15,7 @@ from rich.table import Table
 from toolz import groupby
 
 from atopile import address, errors
-from atopile.components import manufacturing, abstract
+from atopile.components import properties
 from atopile.instance_methods import all_descendants, match_components
 
 log = logging.getLogger(__name__)
@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 # These functions are used to downgrade the errors to warnings.
 # Those warnings are logged and the default value is returned.
 _get_mpn = errors.downgrade(
-    manufacturing.get_mpn, (abstract.MissingData, abstract.NoMatchingComponent)
+    properties.get_mpn, properties.MissingData
 )
 
 
@@ -37,8 +37,8 @@ def _get_footprint(addr: address.AddrStr) -> str:
     Finally, it'll fallback to a question mark "?"
     """
     if value := errors.downgrade(
-        manufacturing.get_footprint,
-        abstract.MissingData
+        properties.get_footprint,
+        properties.MissingData
     )(addr):
         return value
 
@@ -47,15 +47,15 @@ def _get_footprint(addr: address.AddrStr) -> str:
 
 def _get_value(addr: address.AddrStr) -> str:
     value = errors.downgrade(
-        manufacturing.get_user_facing_value,
-        (abstract.MissingData, abstract.NoMatchingComponent)
+        properties.get_user_facing_value,
+        properties.MissingData
     )(addr)
 
     if value is not None:
         return value
 
     value = str(errors.downgrade(
-        manufacturing.get_specd_value, abstract.MissingData
+        properties.get_specd_value, properties.MissingData
     )(addr))
 
     if value is not None:
@@ -89,7 +89,7 @@ def generate_designator_map(entry_addr: address.AddrStr) -> str:
     sorted_designator_dict = {}
     sorted_comp_name_dict = {}
     for component in all_components:
-        c_des = manufacturing.get_designator(component)
+        c_des = properties.get_designator(component)
         c_name = address.get_instance_section(component)
         sorted_designator_dict[c_des] = c_name
         sorted_comp_name_dict[c_name] = c_des
@@ -162,7 +162,7 @@ def generate_bom(entry_addr: address.AddrStr) -> str:
             component = components_in_group[0]
 
             friendly_designators = ",".join(
-                manufacturing.get_designator(component)
+                properties.get_designator(component)
                 for component in components_in_group
             )
 
@@ -178,7 +178,7 @@ def generate_bom(entry_addr: address.AddrStr) -> str:
             for component in components_in_group:
                 _add_row(
                     _get_value(component),
-                    manufacturing.get_designator(component),
+                    properties.get_designator(component),
                     _get_footprint(component),
                     "?",
                 )

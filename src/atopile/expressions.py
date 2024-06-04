@@ -15,6 +15,13 @@ from atopile import address, errors
 _UNITLESS = pint.Unit("")
 
 
+class Any:
+    """Represents the ato any type (unconstrained)"""
+
+    def __repr__(self) -> str:
+        return "Any"
+
+
 def _custom_float_format(value, max_decimals: int):
     """
     Format the float to have up to max_decimals places, but fewer if there's no more precision.
@@ -576,7 +583,7 @@ def simplify_expression_pool(
         value = context[key]
 
         # If this is something simple, just return it in the first place
-        if not callable(value):
+        if not callable(value) or value is Any:
             touched.add(key)
             return value
 

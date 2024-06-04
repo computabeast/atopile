@@ -12,7 +12,7 @@ from atopile.address import (
     get_name,
     get_relative_addr_str,
 )
-from atopile.components.abstract import MissingData, get_specd_value
+from atopile.components.properties import MissingData, get_specd_value
 from atopile.front_end import Link
 from atopile.instance_methods import (
     all_descendants,

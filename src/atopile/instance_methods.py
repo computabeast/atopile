@@ -39,12 +39,33 @@ def get_assignments(addr: str, key: Optional[str] = None) -> list[Assignment]:
     return parent_inst.assignments[key]
 
 
-def get_data(addr: str, key: Optional[str] = None) -> Any:
+class RaiseException:
+    """A sentinel to indicate that no default value was given"""
+
+    def __repr__(self) -> str:
+        return "NoDefault"
+
+
+def get_data(addr: str, key: Optional[str] = None, default = RaiseException) -> Any:
     """Return the data at the given address"""
     assignments = get_assignments(addr, key)
     if assignments[0].value is not None:
         return assignments[0].value
-    raise errors.AtoKeyError(f"{addr} is declared, but has no value for {key}")
+    if default is RaiseException:
+        raise errors.AtoKeyError(f"{addr} is declared, but has no value for {key}")
+    return default
+
+
+def set_data(addr: str, value: Any, key: Optional[str] = None) -> None:
+    """Set the data at the given address"""
+    if not key:
+        parent_addr, key = _split_parent_and_key(addr)
+    else:
+        parent_addr = addr
+    parent_addr = address.get_parent_instance_addr(addr)
+    parent_inst = lofty.get_instance(parent_addr)
+    # FIXME: what's the behaviour if the key doesn't exist?
+    parent_inst.assignments[key].appendleft(Assignment(name=key, value=value, given_type=None))
 
 
 def all_descendants(addr: str) -> Iterable[str]:

@@ -16,7 +16,8 @@ import atopile.manufacturing_data
 import atopile.netlist
 import atopile.variable_report
 from atopile.cli.common import project_options
-from atopile.components.manufacturing import download_footprint
+from atopile.components.properties import download_footprint
+from atopile.components.find_components import find_components_from_abstract
 from atopile.config import BuildContext
 from atopile.errors import ExceptionAccumulator
 from atopile.instance_methods import all_descendants, match_components
@@ -69,6 +70,10 @@ def _do_build(build_ctx: BuildContext) -> None:
                 atopile.assertions.simplify_expressions(build_ctx.entry)
                 atopile.assertions.solve_assertions(build_ctx)
                 atopile.assertions.simplify_expressions(build_ctx.entry)
+
+        # Find components for everything abstract
+        with err_cltr():
+            find_components_from_abstract(build_ctx)
 
         # Ensure the build directory exists
         log.info("Writing outputs to %s", build_ctx.build_path)

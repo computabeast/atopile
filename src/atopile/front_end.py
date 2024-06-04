@@ -18,6 +18,7 @@ from attrs import define, field, resolve_types
 from atopile import address, config, errors, expressions, parse_utils
 from atopile.address import AddrStr
 from atopile.datatypes import KeyOptItem, KeyOptMap, Ref, StackList
+from atopile.expressions import Any as AtoAny
 from atopile.expressions import RangedValue
 from atopile.generic_methods import recurse
 from atopile.parse import parser
@@ -266,10 +267,6 @@ resolve_types(Link)
 # Sentinel Classes
 class Nothing:
     """Representing nothing being passed around the visitor."""
-
-
-class AtoAny:
-    """Represents the ato any type (unconstrained)"""
 
 
 def _make_obj_layer(address: AddrStr, super: Optional[ClassLayer] = None) -> ClassLayer:

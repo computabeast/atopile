@@ -6,7 +6,7 @@ from toolz import groupby
 
 from atopile import config, errors, layout, nets
 from atopile.address import AddrStr, get_name, get_relative_addr_str
-from atopile.components import abstract, manufacturing
+from atopile.components import properties
 from atopile.instance_methods import (
     all_descendants,
     get_children,
@@ -25,14 +25,8 @@ from atopile.kicad6_datamodel import (
     KicadSheetpath,
 )
 
-_get_mpn = errors.downgrade(
-    manufacturing.get_mpn, (abstract.MissingData, abstract.NoMatchingComponent)
-)
-_get_value = errors.downgrade(
-    manufacturing.get_user_facing_value,
-    (abstract.MissingData, abstract.NoMatchingComponent),
-    default="?",
-)
+_get_mpn = errors.downgrade(properties.get_mpn, properties.MissingData)
+_get_value = errors.downgrade(properties.get_user_facing_value, properties.MissingData, default="?")
 
 
 class NetlistBuilder:
@@ -75,7 +69,7 @@ class NetlistBuilder:
         parent = get_parent(node_addr)
         node = KicadNode(
             pin=get_name(node_addr),  # eg. 1
-            ref=manufacturing.get_designator(parent),  # eg. R1
+            ref=properties.get_designator(parent),  # eg. R1
             pintype="stereo",
         )
         return node
@@ -103,11 +97,11 @@ class NetlistBuilder:
 
         # add the lib: prefix if it's not there or there is a different prefix
         # This is used by kicad to reference which library the footprint is from
-        footprint_with_prefix = manufacturing.get_footprint(comp_addr)
+        footprint_with_prefix = properties.get_footprint(comp_addr)
         if ":" not in footprint_with_prefix:
             footprint_with_prefix = "lib:" + footprint_with_prefix
 
-        designator = manufacturing.get_designator(comp_addr)
+        designator = properties.get_designator(comp_addr)
         constructed_component = KicadComponent(
             ref=designator,
             value=_get_value(comp_addr),
@@ -131,12 +125,12 @@ class NetlistBuilder:
         # otherwise we can't continue the netlist build
         for cltr, component in errors.iter_through_errors(all_components):
             with cltr():
-                manufacturing.get_footprint(component)
+                properties.get_footprint(component)
 
         # group the components by their footprint - because that seems
         # to be the only distinguishing feature KiCAD cares about
         for footprint, group_components in groupby(
-            manufacturing.get_footprint, all_components
+            properties.get_footprint, all_components
         ).items():
             libsource = self._libparts[footprint] = self.make_libpart(
                 group_components[0]
