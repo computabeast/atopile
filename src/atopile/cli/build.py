@@ -10,6 +10,7 @@ import click
 import atopile.assertions
 import atopile.bom
 import atopile.config
+import atopile.errors
 import atopile.front_end
 import atopile.layout
 import atopile.manufacturing_data
@@ -76,16 +77,21 @@ def _do_build(build_ctx: BuildContext) -> None:
 
         # Figure out what targets to build
         if build_ctx.targets == ["__default__"]:
-            targets = muster.do_by_default
+            initial_targets = muster.do_by_default
         elif build_ctx.targets == ["*"] or build_ctx.targets == ["all"]:
-            targets = list(muster.targets.keys())
+            initial_targets = list(muster.targets.keys())
         else:
-            targets = build_ctx.targets
+            initial_targets = build_ctx.targets
 
         # Remove targets we don't know about, or are excluded
         excluded_targets = set(build_ctx.exclude_targets)
         known_targets = set(muster.targets.keys())
-        targets = set(targets) - excluded_targets & known_targets
+        targets = set(initial_targets) - excluded_targets & known_targets
+        unknown_targets = set(initial_targets) - excluded_targets - known_targets
+        if unknown_targets:
+            log.warning("Unknown targets: \"%s\"", ", ".join(unknown_targets))
+            if not targets:
+                raise atopile.errors.AtoError("No known targets to build")
 
         # Ensure the output directory exists
         build_ctx.output_base.parent.mkdir(parents=True, exist_ok=True)

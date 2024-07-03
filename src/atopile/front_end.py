@@ -341,6 +341,11 @@ class HandlesPrimaries(AtopileParserVisitor):
         """
         return Ref(ctx.getText().split("."))
 
+    def visit(self, tree: ParserRuleContext) -> Any:
+        """Ain't nothing here other than a convenient hook on a breakpoint."""
+        src_file, src_line, *_ = get_src_info_from_ctx(tree)
+        return super().visit(tree)
+
     def visitName_or_attr(self, ctx: ap.Name_or_attrContext) -> Ref:
         if ctx.name():
             name = self.visitName(ctx.name())
