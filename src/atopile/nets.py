@@ -28,14 +28,25 @@ def get_nets(root: AddrStr) -> Iterable[Iterable[str]]:
     for addr in all_descendants(root):
         if match_pins_and_signals(addr):
             net_soup.add(addr)
+
         for link in get_links(addr):
             source = link.source.addr
             target = link.target.addr
 
             if match_interfaces(source) and match_interfaces(target):
+                source_if_names = set(get_name(child) for child in get_children(source))
+                target_if_names = set(get_name(child) for child in get_children(target))
+                if source_if_names != target_if_names:
+                    raise errors.AtoTypeError.from_ctx(
+                        link.src_ctx,
+                        f"Cannot connect {source} and {target} because their interfaces don't match"
+                        f"{repr(source_if_names)} vs. {repr(target_if_names)}"
+                    )
+
                 for int_pin in get_children(source):
                     if match_pins_and_signals(int_pin):
-                        net_soup.join(int_pin, add_instance(target, get_name(int_pin)))
+                        target_if = add_instance(target, get_name(int_pin))
+                        net_soup.join(int_pin, target_if)
                     else:
                         raise errors.AtoNotImplementedError("Cannot nest interfaces yet.")
             elif match_interfaces(source) or match_interfaces(target):
